@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria: #0F0E0E;
+    --cor-secundaria: #EEEEEE;
+    --cor-terciaria: #8B9A46;
+    --cor-hover: #541212;
+
+    --fonte-primaira: 'Krona One', sans-serif;
+    --fonte-secundaria: 'montserrat', sans-serif;
+
+        
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; coloca-se inicialmente para que o que está sendo colocado em tela preencha a tela toda, a partir do momento que já tem vários elementos, pode tirar*/ 
+    box-sizing: border-box; /**box-sizing: border-box; (faz com que a imagem  não saia da tela,o conteúdo se adeque para estar sempre dentro da página**/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--cor-terciaria);
+    text-decoration: none;
+}
+
+
+
+.apresentacao {
+    padding: 5% 15%; /** primeiro espaço superior e inferior, segundo para as laterais**/
+    display: flex; /**faz com que os elementos se adequem de acordo com o dispositivo**/
+    align-items: center; /**alinha entre os próprios elementos**/
+    justify-content: space-between; /**cria espaço entre os elementos**/
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /** propriedade gap não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.**/
+}
+
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /**pega o valor do pixel divide por 16 que vai ter o valor do REM**/
+    font-family: var(--fonte-primaira);
+
+}
+
+.apresetacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column; /** essa tag vai mudar a direção padrão do flexbox, de row para coluna de cima para baixo, ou seja, muda o eixo.**/
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao_links_subtitulos {
+    font-family: var(--fonte-primaira);
+    font-weight: 400;
+
+}
+
+
+.apresentacao__links__navegacao {
+    /**background-color: #22D4FD; esse código serve para preencher o botão com uma cor sólida**/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px; /**essa propriedade serve para arredondar a borda**/
+    font-size: 1.5rem;
+    font-weight: 600 ;
+    padding: 21.5px 0; /**primeiro valor espaçamento vertical, segundo horizontal**/
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+ 
+}
+
+.apresetacao__imagem {
+ width: 50%;
+}
+
+.rodape {
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/**definições de responsividade**/
+
+@media (max-width: 1200px){
+
+  
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
